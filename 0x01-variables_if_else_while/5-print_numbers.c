@@ -7,11 +7,12 @@
  */
 int main(void)
 {
-	int i;
+	int n = '0';
 
-	for (i = '0'; i <= '9'; i++)
+	while (n <= '9')
 	{
-		printf("%d", i);
+		printf("%d", n);
+		n++;
 		putchar('\n');
 	}
 	return (0);
