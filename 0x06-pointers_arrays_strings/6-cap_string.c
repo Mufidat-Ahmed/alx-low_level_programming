@@ -12,7 +12,7 @@ char *cap_string(char *n)
 
 	while (n[index])
 	{
-		while (n[index] >= 97 && n[index] <= 122)
+		while (!(n[index] >= 97 && n[index] <= 122))
 			index++;
 		if (n[index - 1] == ' ' ||
 				n[index - 1] == '\t' ||
