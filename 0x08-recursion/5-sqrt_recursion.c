@@ -13,7 +13,6 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (new_sqrt_recursion);
 }
 /**
  * new_sqrt_recursion - prints the square root of a number
