@@ -36,12 +36,10 @@ int strlen_pal(char *s)
  */
 int palindrome(char *s, int i, int m)
 {
-	if (*(s + 1) != *(s + m - 1))
-			return (0);
-			else if (i >= m)
-			{
-			return (1);
-			}
-			return (palindrome(s, i + 1, m - 1));
+	if (*(s + i) != *(s + m - 1))
+		return (0);
+	else if (i >= m)
+		return (1);
+	return (palindrome(s, i + 1, m - 1));
 }
 
