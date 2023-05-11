@@ -21,9 +21,9 @@ int prime_number(int n, int m)
 {
 	if (n < 1)
 		return (0);
-	if (n % m == 0 || m > 1);
+	else if (n % m == 0 || m > 1)
 	return (0);
-	if (m == 1)
+	else if (m == 1)
 		return (1);
 	return (prime_number(n, m + 1));
 }
