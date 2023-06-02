@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 
+int num(char *str);
 /**
  * main - program that prints positive number
  * @argc: Contains number of arguments in argv
@@ -10,7 +11,6 @@
  * Return: 0
  */
 
-int num(char *str);
 int main(int argc, char *argv[])
 {
 	int m = 1;
