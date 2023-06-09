@@ -1,38 +1,38 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - check the code
+ * print_tab - Prints an array of string
+ * @tab: The array to print
  *
- * Return: Always 0.
+ * Return: nothing
+ */
+void print_tab(char **tab)
+{
+    int i;
+
+    for (i = 0; tab[i] != NULL; ++i)
+    {
+        printf("%s\n", tab[i]);
+    }
+}
+
+/**
+ * main - check the code for ALX School students.
+ *
+ * Return: 1 if an error occurred, 0 otherwise
  */
 int main(void)
 {
-    int r;
+    char **tab;
 
-    r = wildcmp("main.c", "*.c");
-    printf("%d\n", r);
-    r = wildcmp("main.c", "m*a*i*n*.*c*");
-    printf("%d\n", r);
-    r = wildcmp("main.c", "main.c");
-    printf("%d\n", r);
-    r = wildcmp("main.c", "m*c");
-    printf("%d\n", r);
-    r = wildcmp("main.c", "ma********************************c");
-    printf("%d\n", r);
-    r = wildcmp("main.c", "*");
-    printf("%d\n", r);
-    r = wildcmp("main.c", "***");
-    printf("%d\n", r);
-    r = wildcmp("main.c", "m.*c");
-    printf("%d\n", r);
-    r = wildcmp("main.c", "**.*c");
-    printf("%d\n", r);
-    r = wildcmp("main-main.c", "ma*in.c");
-    printf("%d\n", r);
-    r = wildcmp("main", "main*d");
-    printf("%d\n", r);
-    r = wildcmp("abc", "*b");
-    printf("%d\n", r);
+    tab = strtow("      ALX School         #cisfun      ");
+    if (tab == NULL)
+    {
+        printf("Failed\n");
+        return (1);
+    }
+    print_tab(tab);
     return (0);
 }
