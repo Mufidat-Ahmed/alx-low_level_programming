@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 	return (0);
 }
 /**
- * strlen - checks the length of string
+ * _strlen - checks the length of string
  * @s: string to be checked
  * Return: string length
  */
