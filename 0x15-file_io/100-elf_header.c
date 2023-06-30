@@ -23,6 +23,7 @@ void close_elf(int elf);
 void check_elf(unsigned char *e_ident)
 {
 	int i;
+
 	for (i = 0; i < 4; i++)
 	{
 		if (e_ident[i] != 127 &&
@@ -43,6 +44,7 @@ void check_elf(unsigned char *e_ident)
 void print_magic(unsigned char *e_ident)
 {
 	int i;
+
 	printf("Magic: ");
 	for (i = 0; i < EI_NIDENT; i++)
 	{
@@ -142,7 +144,9 @@ void close_elf(int elf)
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
+
 	int opens, reads;
+
 	opens = open(argv[1], O_RDONLY);
 	if (opens == -1)
 	{
