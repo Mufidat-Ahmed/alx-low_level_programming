@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (copy == NULL)
 		return (0);
 	count = key_index((const unsigned char *)key, ht->size);
-	for (m = count; ht->array; m++)
+	for (m = count; ht->array[m]; m++)
 	{
 		if (strcmp(ht->array[m]->key, key) == 0)
 		{
