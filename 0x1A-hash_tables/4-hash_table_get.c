@@ -19,9 +19,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	new_node = ht->array[count];
 
 	while (new_node && strcmp(new_node->key, key) != 0)
-	{
-			return (new_node->key);
 		new_node = new_node->next;
-	}
+
 	return ((new_node == NULL) ?  NULL : new_node->value);
 }
