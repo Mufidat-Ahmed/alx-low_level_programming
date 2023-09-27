@@ -1,5 +1,10 @@
 #include "lists.h"
 
+/**
+ * free_dlistint - Frees dlistint list
+ * @head: pointer to dlistint
+ */
+
 void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *current;
