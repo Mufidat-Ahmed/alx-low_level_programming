@@ -1,0 +1,15 @@
+#Makefile for school executable
+
+CC = gcc
+
+SRC = main.c school.c
+
+TARGEt = school
+
+all: $(TARGET)
+
+$(TARGET): $(SRC)
+	$(CC) $(SRC) -o $(TARGET)
+
+clean:
+	rm -f $(TARGET)
